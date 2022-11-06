@@ -1,10 +1,15 @@
-function createGame(player1, hour, player2) {
+function createGame(player1, hour, player2, resultplayer1, resultplayer2) {
   return `
     <li>
       <img src="./assets/icon-${player1}.svg" alt="Bandeira do ${player1}" />
       <strong>${hour}</strong>
       <img src="./assets/icon-${player2}.svg" alt="Bandeira da ${player2}" />
     </li>
+    <div class="resultado"> 
+    <p>${resultplayer1}</P>
+    <strong>resultado</strong>
+    <p>${resultplayer2}</P>
+    </div>
   `
 }
 
@@ -24,27 +29,22 @@ function createCard(date, day, games) {
 document.querySelector("#cards").innerHTML = 
 
     createCard(
-      "24/11", "quinta", 
-      createGame("brazil", "16:00", "serbia")+
-      createGame("portugal", "16:00", "uruguai")+
-      createGame("portugal", "16:00", "uruguai")+
-      createGame("portugal", "16:00", "uruguai")) 
+      "24/11", "quinta-feira", 
+      createGame("brazil", "16:00", "serbia" , "0", "0")
+      
+      ) 
       
       +
       
       createCard(
-      "28/11","segunda",
-      createGame("switzerland", "13:00", "brazil") +
-      createGame("portugal", "16:00", "uruguai") +
-      createGame("portugal", "16:00", "uruguai") +
-      createGame("portugal", "16:00", "uruguai"))
+      "28/11","segunda-feira",
+      createGame("brazil", "13:00", "switzerland", "0", "0") 
+   )
       
       +
       
       createCard(
-        "02/12", "sexta", 
-      createGame("brazil", "16:00", "cameroon")+
-      createGame("portugal", "16:00", "uruguai")+
-      createGame("portugal", "16:00", "uruguai")+
-      createGame("portugal", "16:00", "uruguai"))
+        "02/12", "sexta-feira", 
+      createGame("brazil", "16:00", "cameroon", "0", "0")
+)
 

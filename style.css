@@ -50,8 +50,9 @@ body * {
 }
 
 header {
-  margin-bottom: 63px;
+  margin: 63px 0 63px;
   text-align: center;
+
 }
 
 #cards {
@@ -67,6 +68,7 @@ header {
   background: var(--card-bg-color);
   border-bottom: 2px solid var(--card-color-primary);
   border-radius: 6px;
+  height: fit-content;
 }
 
 .card h2 {
@@ -118,6 +120,26 @@ header {
 
   color: #e1e1e6;
 }
+
+.resultado {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  border-top: 1px solid #323238
+
+}
+
+.resultado strong,
+.resultado p {
+
+  color: #e1e1e6;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+
 
 .card h2:hover,
 .card ul li strong:hover,
